@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login</title>
+    <style>
+        /* Basic styling for the form */
+        body { display: flex; justify-content: center; align-items: center; height: 100vh; }
+        form { border: 1px solid #ccc; padding: 20px; border-radius: 5px; }
+        label, input { display: block; margin-bottom: 10px; }
+        input[type="submit"] { cursor: pointer; }
+    </style>
+</head>
+<body>
+    <form method="post" action="{% url 'login' %}">
+        {% csrf_token %}
+        <label for="username">Username:</label>
+        <input type="text" name="username" id="username" required>
+
+        <label for="password">Password:</label>
+        <input type="password" name="password" id="password" required>
+
+        <input type="submit" value="Login">
+        {% if form.errors %}
+            <p>Your username and password didn't match. Please try again.</p>
+        {% endif %}
+    </form>
+</body>
+</html>

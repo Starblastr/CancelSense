@@ -1,0 +1,1 @@
+web: gunicorn bestWesternCancellations.wsgi --log-file -

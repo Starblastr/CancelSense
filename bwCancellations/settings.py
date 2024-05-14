@@ -55,7 +55,7 @@ MIDDLEWARE = [
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
 ]
 
-ROOT_URLCONF = "bestWesternCancellations.urls"
+ROOT_URLCONF = "bwCancellations.urls"
 
 TEMPLATES = [
     {
@@ -74,7 +74,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = "bestWesternCancellations.wsgi.application"
+WSGI_APPLICATION = "bwCancellations.wsgi.application"
 
 
 
@@ -85,7 +85,12 @@ WSGI_APPLICATION = "bestWesternCancellations.wsgi.application"
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
-DATABASES = os.environ.get("DATABASES")
+DATABASES = {
+    "default": {
+        "ENGINE": "django.db.backends.sqlite3",
+        "NAME": BASE_DIR / "db.sqlite3",
+    }
+}
 
 
 # Password validation

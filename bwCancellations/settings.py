@@ -28,7 +28,7 @@ DATABASE_URL = os.environ.get('DATABASE_URL')
 
 
 
-ALLOWED_HOSTS = ['hotelbookingpredictor.up.railway.app', '127.0.0.1']
+ALLOWED_HOSTS = ['cancelsense.up.railway.app', '127.0.0.1']
 
 LOGIN_URL = 'login'
 LOGIN_REDIRECT_URL = '/bookings/'

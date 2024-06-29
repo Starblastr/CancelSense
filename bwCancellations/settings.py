@@ -74,7 +74,7 @@ TEMPLATES = [
         },
     },
 ]
-
+print("Templates Directory:",TEMPLATES[0]['DIRS'])
 WSGI_APPLICATION = "bwCancellations.wsgi.application"
 
 
